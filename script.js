@@ -11,3 +11,10 @@ if (true) {
 }
 const PI = 3.142;
 console.log(PI);
+const My_Object = { key: "value" };
+My_Object.key = "Other value";
+let num1, num2;
+num1 = 9;
+num2 = 4;
+sum = 9 + 4;
+console.log("The answer is" + sum);
