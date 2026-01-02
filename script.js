@@ -18,3 +18,25 @@ num1 = 9;
 num2 = 4;
 sum = 9 + 4;
 console.log("The answer is" + sum);
+
+// Array Literals([])
+// Creating an Array using Array literals
+const fruits = ["apple", "orange", "watermelon", "grape"];
+console.log(fruits);
+// Getting the first element of the Array
+console.log(fruits[0]);
+//Getting Array Length
+console.log(fruits.length);
+// Getting the last element of the Array
+console.log(fruits[fruits.length - 1]);
+
+// Object Literals({})
+const Myobj = {
+  firstName: "May Zin",
+  lastName: "Theint",
+  birthDate: "8.11.2004",
+  Gender: "Female",
+};
+// Getting Property value of a property (firstName)
+console.log(Myobj.firstName);
+console.log(Myobj);
