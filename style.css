@@ -1,22 +1,23 @@
+/* External Style Sheet */
+/* Style for body */
 body {
-    background-color: green;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
+  background-color: green;
+  opacity: 0.5;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
 }
-
+/* Style for h1 */
 h1 {
-    color: #000;
-    font-size: 32px;
-    font-weight: bold;
-
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
 }
-
+/* Style for p */
 p {
-    font-size: 16px;
-
+  font-size: 16px;
 }
-
+/* Style for main-text */
 .main-text {
-    color: burlywood;
+  color: burlywood;
 }
