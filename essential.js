@@ -43,3 +43,31 @@ console.log(3 == "3"); //return true; because of type corecion; bug (string vs n
 // Introduced strict equality operator(===) to cover (==) in JS in 1999
 console.log(3 === "3"); //return false
 console.log(3 === Number("3")); //return true
+
+// IV. Expressions vs Statements
+// IV.(1) Expressions
+// Expression produces a value (value is a piece of data)
+// Expressions fill the "slots" within statements where values are needed
+// All of the codes below produces a value; they are expressions
+//eg;
+1994;
+("2984");
+("May Zin Theint");
+3 + 5;
+true;
+false;
+true && false;
+(1 && 0) || !1;
+
+//IV.(2) Statements
+// Statements perform an action and does not necessarily produce a value
+// Eg: if else statement
+if (true) {
+  console.log("This is if block statement!"); //This sentence is statement
+} else {
+  console.log("This is else block!");
+}
+
+// where the whole if....else block is a statement; true is an expression;
+// Example declaration of a variable
+// let profession = "Student";where the whole sentence is statement and ("Engineer") is expression
