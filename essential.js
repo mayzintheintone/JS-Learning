@@ -34,3 +34,12 @@ console.log("23" % 2);
 let n = "1" + 1; //"11"
 n = n - 1; //"11"-1> 11-1>10
 console.log(n);
+
+// III. Equality operators (==)vs strict equality operator (===)
+console.log(3 == 4);
+console.log(3 == 3);
+console.log(3 == "3"); //return true; because of type corecion; bug (string vs number)
+
+// Introduced strict equality operator(===) to cover (==) in JS in 1999
+console.log(3 === "3"); //return false
+console.log(3 === Number("3")); //return true
