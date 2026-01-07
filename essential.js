@@ -70,4 +70,41 @@ if (true) {
 
 // where the whole if....else block is a statement; true is an expression;
 // Example declaration of a variable
-// let profession = "Student";where the whole sentence is statement and ("Engineer") is expression
+let profession = "Student"; //where the whole sentence is statement and ("Engineer") is expression
+
+//V. Operator Precedence
+// When a sentence has two or more operators, which should be first is depend on the operator precedence table.
+// Different operators have different precedence order and may have different associativity
+let booleanResult = (true && false) || (true && false);
+console.log(booleanResult);
+console.log(3 - (1 / 2) * 3 - 4 + 100);
+
+// Ternary Operator (Conditional Operator)
+//  operator structure >> x ? y : z;
+if (true || false) {
+  // ExpressionIfTrue
+  //Do something if true
+  console.log("It's true!");
+} else {
+  // ExpressionIfFalse
+  // Do something if false
+  console.log("It's false");
+}
+// Consider to convert if --- else statement to ternary operator
+// boolean (true or false)? expressionIfTrue:expressionIfFalse;
+// eg1
+let isAdult = true;
+isAdult ? console.log("She is over 18") : console.log("She's under 18");
+
+// Eg2
+let hasDriverlicense = false;
+isAdult && hasDriverlicense
+  ? console.log("One can drive")
+  : console.log("One cannot drive");
+
+const hasPassedTheExam = true;
+hasPassedTheExam ? (hasDriverlicense = true) : (hasDriverlicense = false);
+console.log(hasDriverlicense);
+isAdult && hasDriverlicense
+  ? console.log("One can drive")
+  : console.log("One cannot drive");
