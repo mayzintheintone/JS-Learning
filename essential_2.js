@@ -18,7 +18,8 @@ function sayHi() {
 
 // Calling/ Invoking/Returning a Function
 sayHi();
-
+sayHi();
+sayHi();
 // Eg.2 Calculating the sum of 2 numbers
 function calSum(x, y) {
   // use the keyword "return" to return a value from the function

@@ -1,4 +1,4 @@
-// VI. Strict Mode
+//  Strict Mode
 // write the string "use strict " at the ever top of js file
 "use strict";
 

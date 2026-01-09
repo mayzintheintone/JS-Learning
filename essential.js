@@ -79,7 +79,7 @@ let booleanResult = (true && false) || (true && false);
 console.log(booleanResult);
 console.log(3 - (1 / 2) * 3 - 4 + 100);
 
-// Ternary Operator (Conditional Operator)
+// VI.Ternary Operator (Conditional Operator)
 //  operator structure >> x ? y : z;
 if (true || false) {
   // ExpressionIfTrue

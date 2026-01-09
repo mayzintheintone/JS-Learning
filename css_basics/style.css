@@ -1,0 +1,10 @@
+.bordered-p {
+  /* border: 2px solid black; */
+  border-width: 2px;
+  /* border-style: dotted solid dashed inset; */
+  border-color: black;
+  border-top-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: dashed;
+  border-right-style: outset;
+}
