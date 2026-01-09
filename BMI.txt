@@ -1,0 +1,4 @@
+1)BMI Formula
+BMI = weight (kg) / (height(m))
+
+2)BMI weight Ranges
