@@ -30,6 +30,6 @@ function BMI(mass, height) {
 let bmiofJohn2 = BMI(92, 1.95);
 let bmiofMark2 = BMI(78, 1.69);
 let markHigherBMI2 = bmiofJohn2 > bmiofMark2;
-console.log(bmiofJohn2);
-console.log(bmiofMark2);
+console.log(`BMI of John is ${bmiofJohn2}`);
+console.log(`BMI of Mark is ${bmiofMark2}`);
 console.log(markHigherBMI2);

@@ -1,10 +1,14 @@
 .bordered-p {
   /* border: 2px solid black; */
-  border-width: 2px;
-  /* border-style: dotted solid dashed inset; */
+  border-width: 4px;
+  border-style: dotted solid dashed inset;
   border-color: black;
-  border-top-style: solid;
+  /* border-top-style: solid;
   border-bottom-style: dotted;
   border-left-style: dashed;
-  border-right-style: outset;
+  border-right-style: outset; */
+}
+.rounded-p {
+  border: 3px solid black;
+  border-radius: 10px 5px;
 }
