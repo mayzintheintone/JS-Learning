@@ -17,7 +17,7 @@ function sayHi() {
   console.log(`Hello, this is greeting from "sayHi" functuion!`);
 }
 
-// Calling/ Invoking/Returning a Function
+// Calling/ Invoking/Running a Function
 sayHi();
 sayHi();
 sayHi();
@@ -76,3 +76,11 @@ console.log(calcdDifference(8, 4));
 
 const sayHi3 = (name1) => `Hello,${name1} `;
 console.log(sayHi3("May Zin Theint"));
+
+function calcAge3(birthYear, name) {
+  const age = 2026 - birthYear;
+  console.log(`${name} is ${age} years old.`);
+  return age;
+}
+let mayzinAge = calcAge3(2004, "May Zin Theint");
+console.log(mayzinAge);
