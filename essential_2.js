@@ -39,7 +39,7 @@ console.log(calcMultiplication(6, 9));
 // variable names = nouns;
 // function names = start with a verb
 
-// VIII.3. Arrow functions
+// VII.3. Arrow functions
 // ES6 features
 
 // Using Function Expression to calculate current age
@@ -84,3 +84,38 @@ function calcAge3(birthYear, name) {
 }
 let mayzinAge = calcAge3(2004, "May Zin Theint");
 console.log(mayzinAge);
+
+// VII.4 Invoking functions in other functions
+// Eg1.
+function fruitProcessor(fruit) {
+  return fruit * 4;
+}
+function juiceMaker(apples, pineapples) {
+  const applePieces = fruitProcessor(apples);
+  const pineapplePieces = fruitProcessor(pineapples);
+  // console.log(`${apples} apples is cut into ${applePieces} pieces.`);
+  const juice = `The juice is made with ${applePieces} apple pieces and  ${pineapplePieces} pineapple pieces.`;
+  return juice;
+}
+console.log(juiceMaker(2, 3));
+
+// VII. Eg2 calling a function in another function
+const isNumber = (num) => {
+  if (typeof num === "number") {
+    return true;
+  } else {
+    return false;
+  }
+};
+const calcTotal = function (x, y) {
+  const isXnumber = isNumber(x);
+  const isYnumber = isNumber(y);
+  if (isXnumber && isYnumber) {
+    return x + y;
+  } else {
+    console.log("Invalid! Please input numbers only");
+  }
+};
+console.log(calcTotal(3, 4));
+console.log(calcTotal("abc", 4));
+console.log(calcTotal(3, "abc"));
