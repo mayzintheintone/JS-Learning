@@ -110,12 +110,71 @@ const isNumber = (num) => {
 const calcTotal = function (x, y) {
   const isXnumber = isNumber(x);
   const isYnumber = isNumber(y);
-  if (isXnumber && isYnumber) {
-    return x + y;
-  } else {
+  if (!isXnumber || !isYnumber) {
     console.log("Invalid! Please input numbers only");
+  } else {
+    return x + y;
+    // console.log("Invalid! Please input numbers only");
   }
 };
 console.log(calcTotal(3, 4));
 console.log(calcTotal("abc", 4));
 console.log(calcTotal(3, "abc"));
+
+// const calculator = function (num1, num2, operator) {
+//   if (operator === "+") {
+//     return num1 + num2;
+//   } else if (operator === "-") {
+//     return num1 - num2;
+//   } else if (operator === "*") {
+//     return num1 * num2;
+//   } else if (operator === "/") {
+//     return num1 / num2;
+//   } else {
+//     console.log("Invalid");
+//     return;
+//   }
+// };
+
+// VIII. Arrays
+// VIII.1. Array Literals[]
+[1, 2, 3, 4, 5];
+const arr0 = []; //empty array;
+const arr1 = [, 1, 2, 3, 4];
+const arr2 = [1, , 3, 4, , ,];
+console.log(arr1[0]);
+
+// VIII.2. Array length Property
+const friends = ["Su", "Hla", "Phoo", "Aye", "Hnin", "Myat"];
+console.log(friends);
+console.log(friends.length);
+const lastIndex = friends.length - 1;
+const firstFriend = friends[0];
+console.log(firstFriend);
+const lastFriend = friends[lastIndex];
+console.log(lastFriend);
+
+// VIII.3. Array.indexOf() method
+const fruits = ["orange", "mango", "banana", "pineapple"];
+console.log(fruits.indexOf("banana"));
+fruits[fruits.indexOf("banana")] = "grapes"; //can be mutated
+console.log(fruits.indexOf("apple")); // apple doesn't exist in array(returns -1)
+// fruits = [1,2,3,4];//Error;cann't br resigned
+console.log(fruits);
+
+// VIII.4.Array.includes() method
+console.log(fruits.includes("apple"));
+console.log(fruits.includes("grapes")); //Array.includes return boolean
+const indexOfOrange = fruits.indexOf("orange");
+const replaceFruit = function (fruitToRemove, fruitToReplace) {
+  if (fruits.includes(fruitToRemove)) {
+    const indexOffruitToRemove = fruits.indexOf(fruitToRemove);
+    fruits[indexOffruitToRemove] = fruitToReplace;
+    return "Successful!";
+  } else {
+    console.log("Unsucess! Fruit to remove cann't be found");
+    return "Unsuccessful!";
+  }
+};
+replaceFruit("pineapple", "watermelon");
+console.log(fruits);
