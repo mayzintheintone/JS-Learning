@@ -178,3 +178,43 @@ const replaceFruit = function (fruitToRemove, fruitToReplace) {
 };
 replaceFruit("pineapple", "watermelon");
 console.log(fruits);
+
+const replaceFruit2 = (fruitToRemove, fruitToReplace) => {
+  if (!fruits.includes(fruitToRemove)) {
+    console.log("Uncess! Fruit to remove can't be found");
+    return "unsuccessful!";
+  }
+  const indexOffruitToRemove = fruits.indexOf(fruitToRemove);
+  fruits[indexOffruitToRemove] = fruitToReplace;
+  return "Successful!";
+};
+replaceFruit2("watermelon", "coconut");
+console.log(fruits);
+
+// VIII.5 Adding Elements to Arrays(Array.push())
+// Add new  element to the end of the array
+// returns  the new length of the array
+const friendsList = ["Hla", "Su Su", "Nway", "Myat", "Wai"];
+const newFriends = friendsList.push("Khaing", "Moe");
+
+console.log(friendsList.length, newFriends, friendsList);
+
+// VIII.6.Array.pop() metmod//Removing an Element of the Array
+// Remove the last element of the Array
+// Returns the removed element
+console.log(friendsList.pop());
+console.log(friendsList.pop());
+console.log(friendsList);
+
+//// VIII.7.Array.shift() metmod//Removing an Element of the Array
+// Remove the first element of the Array
+// Returns the removed element
+
+const shiftedFriend = friendsList.shift();
+console.log(shiftedFriend);
+console.log(friendsList);
+
+// VIII.8. Adding Elements to Arrays(Array.unshift())
+// Add new  element to the begining of the array
+// returns  the new length of the array
+console.log(friendsList.unshift("Moe", "Thu"), friendsList);
