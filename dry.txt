@@ -1,0 +1,14 @@
+Don't Repeat Yourself (DRY) Principle
+    
+    Every peace of knowledge(data) must have a single , representation within a system.
+
+    "Key Concepts"
+     -Knowledge,Not Just Code
+     -Single Source of Truth
+     -WET(The Opposite): Systems that do not follow DRY are often are called WET("Write everything twice","Waste Everyone's Time", or "We enjoy typing")
+
+    Benefits of DRY
+        -Maintainability
+        -Readability
+        -Consistency
+        -Reduced Development Time

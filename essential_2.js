@@ -144,7 +144,7 @@ const arr1 = [, 1, 2, 3, 4];
 const arr2 = [1, , 3, 4, , ,];
 console.log(arr1[0]);
 
-// VIII.2. Array length Property
+// VIII.2. Array.length Property
 const friends = ["Su", "Hla", "Phoo", "Aye", "Hnin", "Myat"];
 console.log(friends);
 console.log(friends.length);
@@ -191,7 +191,7 @@ const replaceFruit2 = (fruitToRemove, fruitToReplace) => {
 replaceFruit2("watermelon", "coconut");
 console.log(fruits);
 
-// VIII.5 Adding Elements to Arrays(Array.push())
+// VIII.5 Adding Elements to Arrays(Array.push() method)
 // Add new  element to the end of the array
 // returns  the new length of the array
 const friendsList = ["Hla", "Su Su", "Nway", "Myat", "Wai"];
@@ -218,3 +218,65 @@ console.log(friendsList);
 // Add new  element to the begining of the array
 // returns  the new length of the array
 console.log(friendsList.unshift("Moe", "Thu"), friendsList);
+
+//IX. Objects
+//IX.1. Introduction to Objects
+const paingArray = [
+  "Paing Soe",
+  "Chit",
+  1996,
+  "Engineer",
+  ["Myat Thu", "Ar Kar", "Aung Htun"],
+];
+console.log(paingArray); //Reading array element by index
+// Object Literals{}
+const paing = {
+  firstName: "Paing Soe",
+  lastName: "Chit",
+  professional: "Engineer",
+  friends: ["Myat Thu", "Ar Kar", "Aung Htun"],
+};
+
+console.log(paing);
+
+//IX.2. Reading and Overwriting property in Object
+//IX.2.1 The Dot(.) notation
+//Dot natation accepts only key
+console.log(paing.lastName); //reading object's value by using key name with dot notation
+console.log(paing.friends);
+console.log(paing.girlFriend); //returns undefined because no property with that key
+paing.girlFriend = "May Zin Theint"; //Inserting new property to object
+console.log(paing.girlFriend);
+console.log(paing.birthYear);
+paing.birthYear = 1993; //Overwrite the new value to the specific key(Reassign)
+console.log(paing.birthYear);
+
+//IX.2.2 The Bracket[] Notation
+//Bracket Notation accepts only expression
+console.log(paing["firstName"]); //Reading
+paing["hasDriverLicense"] = false; //Adding/Writing
+console.log(paing);
+
+const commonNameKey = "Name";
+console.log(paing["last" + commonNameKey]);
+
+//IX.3. Objects Methods
+// A special type of property that stores function value
+// Functions attached to an object
+const mayzintheint = {
+  firstName: "May Zin",
+  lastName: "Theint",
+  birthYear: 2004,
+  nickName: "Chaw Hsu",
+  calculateAge: function (birthYear) {
+    return 2026 - birthYear;
+  }, //Special type of property(method)
+};
+console.log(mayzintheint);
+// const calculateAge = function (birthYear) {
+//   return 2026 - birthYear;
+// };
+// console.log(calculateAge(mayzintheint.birthYear));
+
+const mayzintheintAge = mayzintheint.calculateAge(mayzintheint.birthYear);
+console.log(mayzintheintAge);
