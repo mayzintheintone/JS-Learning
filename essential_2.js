@@ -268,15 +268,29 @@ const mayzintheint = {
   lastName: "Theint",
   birthYear: 2004,
   nickName: "Chaw Hsu",
-  calculateAge: function (birthYear) {
-    return 2026 - birthYear;
+  calculateAge: function () {
+    // console.log(this); //refers to rhe objects where the method is attached
+    //let birthDate = this.birthYear; //same with mayzintheint.birthYear
+    return 2026 - this.birthYear;
   }, //Special type of property(method)
 };
-console.log(mayzintheint);
+//mayzintheint.calculateAge;
+console.log(mayzintheint.calculateAge());
+// console.log(mayZintheintAge);
 // const calculateAge = function (birthYear) {
 //   return 2026 - birthYear;
 // };
 // console.log(calculateAge(mayzintheint.birthYear));
 
-const mayzintheintAge = mayzintheint.calculateAge(mayzintheint.birthYear);
-console.log(mayzintheintAge);
+// const mayzintheintAge = mayzintheint.calculateAge(mayzintheint.birthYear);
+// console.log(mayzintheintAge);
+
+//Global scope
+// console.log(this);
+
+function hi(y) {
+  let x = y;
+  console.log(this);
+  return x;
+}
+hi("abc");

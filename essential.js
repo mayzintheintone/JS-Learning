@@ -6,7 +6,6 @@ let age;
 // Use Number() method
 let sum = 2000 + Number(inputYear);
 console.log(sum);
-
 // Convert number to string
 // Use String() method
 console.log(typeof String(2004));
@@ -22,7 +21,7 @@ console.log("I'm " + 21 + " year old");
 
 //Using + operator
 // automatically convert nuber to string when operate with string
-console.log(10 + "10"); //"10" +"10"
+console.log(10 + "10"); //"10" +"10"//Type corecion
 
 // using -, *,/ operators
 //automatically convert string to number
