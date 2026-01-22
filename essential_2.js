@@ -294,3 +294,37 @@ function hi(y) {
   return x;
 }
 hi("abc");
+
+//X. Looping and iteration
+//X.1. For Loop
+
+for (let i = 0; i < 10; i++) {
+  console.log(`Count ${i + 1}`); //change dynamically
+}
+
+//1st exp ===> i=0
+//2nd exp ===> i<5?(true)
+//since 2nd exp is true, the 1st iteration is executed
+//after every iteration, the 3rd exp(afterthought) is executed
+//check the 2nd exp again and so on far
+//the iteration is terminated when the 2nd exp is false
+//const numArray = [1, 2, 3, 4, 5];
+const fruitArray = ["apple", "orange", "mango", "blueberry"];
+for (let i = 0; i < fruitArray.length; i++) {
+  console.log(`fruit ${fruitArray[i]}`);
+}
+const numArray = [1, 2, 3, 4, 7, 9];
+//Ex1. Log each element to it's double
+//Ex2.make a new array to 2 times of each elements in numArray
+//newArray = [2,4,6,8,14,18]
+
+for (let i = 0; i < numArray.length; i++) {
+  console.log(`Answer is ${numArray[i] * 2}`);
+}
+const newArray = [];
+
+for (let i = 0; i < numArray.length; i++) {
+  newArray.push(numArray[i] * 2);
+  //console.log(newArray.push(numArray[i] * 2));
+}
+console.log(newArray);
