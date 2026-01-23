@@ -330,3 +330,30 @@ for (let i = 0; i < numArray.length; i++) {
 }
 console.log(newArray);
 console.log(`newArray = [${newArray}]`);
+
+//Ex3. Construct a function that return a new array to 2 times of an array of numbers
+
+//1.make a new function
+//Inside function
+//2.accept an array of numbers as an argument
+//3.make a new array to 2 times of each element of the accepted array
+//4. return the new array
+
+const twiceMaker = function (numberArray) {
+  const newArray = [];
+  for (let i = 0; i < numberArray.length; i++) {
+    newArray.push(numberArray[i] * 2);
+  }
+  console.log(newArray);
+  return newArray;
+};
+const doubleArray = twiceMaker([3, 4, 5, 6]);
+console.log(doubleArray);
+
+//Ex4. Construct a function that  returns a new array to required times of an array of numbers
+//[1,2,3,4] to 2 or 3 or 4 or 5 times and so on and so far
+const requiredFunction = function (numArray) {
+  let requiredArray = [];
+  let num;
+  requiredArray.push(numArray);
+};
