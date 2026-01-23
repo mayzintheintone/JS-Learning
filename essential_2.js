@@ -357,3 +357,33 @@ const requiredFunction = function (numArray) {
   let num;
   requiredArray.push(numArray);
 };
+
+//XI.Spread Operator (...)
+//XI.1.Copying original iterable expressions
+const orgArray = [1, 2, 3, "apple"];
+
+//copy from original array
+// const copiedArray = orgArray;
+const copiedArray = [...orgArray];
+
+//expanding to a string
+const appleArray = [..."apple"];
+
+//expanding to an object
+const originalObj = { name: "Alice", age: 22 };
+const copiedObj = { ...originalObj };
+
+//XI.2 Merging Data
+//Merging Arrays
+//[1,2,3]
+//[7,8,9]
+//mergeArray = [1,2,3,7,8,9]
+const firstArray = [1, 2, 3];
+const secondArray = [7, 8, 9];
+const mergedArray = [...firstArray, ...secondArray];
+
+//Merging Objects
+const firstObj = { a: 1, b: 2 };
+const secondObj = { b: 3, c: 4 };
+//Desiredobj = {a:1, b:3, c:4}
+const mergedObj = { ...secondObj, ...firstObj };
