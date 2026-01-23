@@ -328,3 +328,4 @@ for (let i = 0; i < numArray.length; i++) {
   //console.log(newArray.push(numArray[i] * 2));
 }
 console.log(newArray);
+console.log(`newArray = [${newArray}]`);
