@@ -315,12 +315,13 @@ for (let i = 0; i < fruitArray.length; i++) {
 }
 const numArray = [1, 2, 3, 4, 7, 9];
 //Ex1. Log each element to it's double
+for (let i = 0; i < numArray.length; i++) {
+  console.log(`Double of ${numArray[i]} is ${numArray[i] * 2}`);
+}
+
 //Ex2.make a new array to 2 times of each elements in numArray
 //newArray = [2,4,6,8,14,18]
 
-for (let i = 0; i < numArray.length; i++) {
-  console.log(`Answer is ${numArray[i] * 2}`);
-}
 const newArray = [];
 
 for (let i = 0; i < numArray.length; i++) {
