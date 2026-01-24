@@ -352,12 +352,21 @@ console.log(doubleArray);
 
 //Ex4. Construct a function that  returns a new array to required times of an array of numbers
 //[1,2,3,4] to 2 or 3 or 4 or 5 times and so on and so far
-const requiredFunction1 = function (numArray, times) {
-  let requiredArray = [];
+const multiplyFunction = function (numArray, times) {
+  let resultArray = [];
   for (let i = 0; i < numArray.length; i++) {
-    requiredArray.push(numArray[i] * times);
+    resultArray.push(numArray[i] * times);
   }
-  return requiredArray;
+  return resultArray;
+};
+
+//by using spread operator
+const mergeFunction = function (numArray, times) {
+  let mergeArray = [];
+  for (let i = 0; i < times; i++) {
+    mergeArray.push(...numArray);
+  }
+  return mergeArray;
 };
 //XI.Spread Operator (...)
 //XI.1.Copying original iterable expressions
