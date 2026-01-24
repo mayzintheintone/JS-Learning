@@ -352,12 +352,13 @@ console.log(doubleArray);
 
 //Ex4. Construct a function that  returns a new array to required times of an array of numbers
 //[1,2,3,4] to 2 or 3 or 4 or 5 times and so on and so far
-const requiredFunction = function (numArray) {
+const requiredFunction1 = function (numArray, times) {
   let requiredArray = [];
-  let num;
-  requiredArray.push(numArray);
+  for (let i = 0; i < numArray.length; i++) {
+    requiredArray.push(numArray[i] * times);
+  }
+  return requiredArray;
 };
-
 //XI.Spread Operator (...)
 //XI.1.Copying original iterable expressions
 const orgArray = [1, 2, 3, "apple"];
