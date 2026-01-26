@@ -397,3 +397,71 @@ const firstObj = { a: 1, b: 2 };
 const secondObj = { b: 3, c: 4 };
 //Desiredobj = {a:1, b:3, c:4}
 const mergedObj = { ...secondObj, ...firstObj };
+
+//Passing Argument to function
+//Argument pass
+const nums = [1, 2, 3, 4];
+const sumNums = (...numlist) => {
+  let sum = 0;
+  for (let i = 0; i < numlist.length; i++) {
+    sum += numlist[i];
+  }
+  return sum;
+};
+console.log(sumNums(nums));
+Array.prototype.push(); //built in global object
+Array.prototype.pop();
+Math.random();
+//0 <= x < 1;
+
+const maxNumber = Math.max(...nums);
+
+// XII. functions inside another functions
+//XII.1. function called inside function
+function sayHi() {
+  console.log("hi"); //function call
+}
+//functions are first class in js
+//XII.2. Nested Function
+function outer() {
+  const outerVariable = "I'm in the outer function scope! ";
+  function inner() {
+    console.log("Hello, I'm from the inner function!");
+    console.log(outerVariable);
+    function innerMost() {
+      console.log("hello, I'm from the innermost function!");
+    }
+    innerMost();
+  }
+  inner();
+  return;
+}
+outer();
+
+//XIII. Callback Functions
+//passing primitive data as an arguments in functions
+console.log(Math.max(1, 2, 3, 4, 5, 6, 7, 9, 8));
+console.log("hello, hi", 1996);
+
+//Eg. Passing a function as an argument in another function
+function sayGoodbye() {
+  console.log("Goodbye");
+}
+function greet(name, callback) {
+  console.log("Hello," + name);
+  callback();
+}
+//sayGoodbye();
+greet("May", sayGoodbye); //passed sayGoodbye as callback function
+
+function saySomething(name, callback) {
+  console.log(name + "," + callback());
+}
+function sayHi() {
+  return "Hi";
+}
+function sayBye() {
+  return "bye";
+}
+saySomething("May", sayBye);
+saySomething("May", sayHi);
