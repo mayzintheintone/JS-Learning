@@ -401,17 +401,10 @@ const mergedObj = { ...secondObj, ...firstObj };
 //Passing Argument to function
 //Argument pass
 const nums = [1, 2, 3, 4];
-const sumNums = (...numlist) => {
-  let sum = 0;
-  for (let i = 0; i < numlist.length; i++) {
-    sum += numlist[i];
-  }
-  return sum;
-};
-console.log(sumNums(nums));
-Array.prototype.push(); //built in global object
-Array.prototype.pop();
-Math.random();
+
+// Array.prototype.push(); //built in global object
+// Array.prototype.pop();
+// Math.random();
 //0 <= x < 1;
 
 const maxNumber = Math.max(...nums);
@@ -455,7 +448,7 @@ function greet(name, callback) {
 greet("May", sayGoodbye); //passed sayGoodbye as callback function
 
 function saySomething(name, callback) {
-  console.log(name + "," + callback());
+  console.log(name + ", " + callback());
 }
 function sayHi() {
   return "Hi";
@@ -465,3 +458,12 @@ function sayBye() {
 }
 saySomething("May", sayBye);
 saySomething("May", sayHi);
+
+// Looping Arrays
+//Traditional for loop
+// Array.prototype.map()
+// Map() method
+const numList = [4, 6, 2, 7];
+const newArr = numList.map((y) => y * 2);
+console.log(newArr);
+// callbackFn(element, index,array)
