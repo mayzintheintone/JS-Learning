@@ -463,7 +463,50 @@ saySomething("May", sayHi);
 //Traditional for loop
 // Array.prototype.map()
 // Map() method
+//It's return value is added
+//return a new array
 const numList = [4, 6, 2, 7];
-const newArr = numList.map((y) => y * 2);
+const newArr = numList.map((el) => el * 2);
 console.log(newArr);
 // callbackFn(element, index,array)
+// map description
+
+const randomNumbers = [1, 3, 5, 6, 2, 4, 8, 9, 13, 18, 16, 11];
+//Code challenge
+//Created a new array only with the odd numbers from the randomnumbers array
+//using the forEach() method
+
+//forEach Method()
+// Array.prototype.forEach()
+//It's return value is discarded
+//forEach(callbackFn)
+//forEach(callbackfn,thisArg)
+//return none
+const fruitsList = ["orange", "mango", "banana", "apple", "lemon", "banana"];
+//log every fruit in the fruits in browser console.
+//Using the traditional for loop
+for (let i = 0; i < fruitsList.length; i++) {
+  console.log(fruitsList[i]);
+}
+
+//Using Array.forEach()method
+fruitsList.forEach((el) => console.log(el));
+
+let twiceMultiply = [];
+numList.forEach((number) => twiceMultiply.push(number * 2));
+console.log(twiceMultiply);
+
+const commonArray = [
+  1,
+  "apple",
+  "Hi",
+  1993,
+  2,
+  "teacher",
+  [1, 2, 3],
+  [4, "banana", 6],
+  9,
+  undefined,
+  ,
+];
+// Create an array only with numbers from the above commonArray
