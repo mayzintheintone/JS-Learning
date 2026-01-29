@@ -510,3 +510,13 @@ const commonArray = [
   ,
 ];
 // Create an array only with numbers from the above commonArray
+
+// Array.prototype.filter()
+const originalArray = [1, 2, 3, 4, 5, 6, 7, 9, 11, 24, 23];
+//iterate on every single element once
+//callBackFn(must truthy or falsy)
+//create a new array with the filtered elements//return shallow copy
+//a little similar with the map() method// same length with the original array
+const scores = [194, 224, 366, 128, 256, 213, 521, 501, 477, 471];
+//assume that only above 240 and scores pass the test
+const studentMarks = scores.filter((mark) => mark >= 240);
