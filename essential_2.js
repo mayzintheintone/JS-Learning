@@ -510,7 +510,11 @@ const commonArray = [
   ,
 ];
 // Create an array only with numbers from the above commonArray
-
+const newNumbers = [];
+commonArray.forEach((number) => {
+  if (typeof number === "number") newNumbers.push(number);
+});
+const onlyNumbers = commonArray.filter((number) => typeof number === "number");
 // Array.prototype.filter()
 const originalArray = [1, 2, 3, 4, 5, 6, 7, 9, 11, 24, 23];
 //iterate on every single element once
