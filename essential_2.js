@@ -511,10 +511,10 @@ const commonArray = [
 ];
 // Create an array only with numbers from the above commonArray
 const newNumbers = [];
-commonArray.forEach((number) => {
-  if (typeof number === "number") newNumbers.push(number);
+commonArray.forEach((el) => {
+  if (typeof el === "number") newNumbers.push(el);
 });
-const onlyNumbers = commonArray.filter((number) => typeof number === "number");
+const onlyNumbers = commonArray.filter((number) => typeof el === "number");
 // Array.prototype.filter()
 const originalArray = [1, 2, 3, 4, 5, 6, 7, 9, 11, 24, 23];
 //iterate on every single element once
@@ -524,3 +524,54 @@ const originalArray = [1, 2, 3, 4, 5, 6, 7, 9, 11, 24, 23];
 const scores = [194, 224, 366, 128, 256, 213, 521, 501, 477, 471];
 //assume that only above 240 and scores pass the test
 const studentMarks = scores.filter((mark) => mark >= 240);
+
+//Array.prototype.slice()
+// return a shallow copy
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+const animalsSliced = animals.slice();
+console.log(animalsSliced);
+const animalsSliced2 = animals.slice(2); //index-based
+const animalsSliced3 = animals.slice(2, 5);
+console.log(animalsSliced2);
+console.log(animalsSliced3);
+
+//Negative index
+//start
+//if -array.length <=start<0, start +aray.length is used.
+const animalsSliced_2 = animals.slice(-2); //(-2+7 = 5)//same as slice(5)
+const animalsSliced5 = animals.slice(5);
+console.log(animalsSliced_2);
+console.log(animalsSliced5);
+
+//If start< -array.length or start is omitted, 0 is used.
+const animalsSlicedOf0 = animals.slice(0);
+console.log(animalsSlicedOf0);
+const animalsSliced_9 = animals.slice(-9); //-9 < -array.length//same as sloice(0)
+console.log(animalsSliced_9);
+
+//start >= array.length, an empty array is returned.
+//animals.length = 7;
+const animalsSlicedOf9 = animals.slice(7);
+console.log(animalsSlicedOf9);
+
+//if -array.length <= end <0, end+array.length is used.
+console.log(animals.slice(2, -1)); //(2, -1 +7)=(2,6)
+console.log(animals.slice(2, 6));
+
+//if end < -array.length, 0 is used.
+//animals.length=7
+// If end implies a position before or at the position that start implies, is returned an
+
+console.log(animals.slice());
+console.log(animals.slice(2, -9)); // -9<-7//(2,0)//empty array[]
+console.log(animals.slice(2, 0)); //empty array[]
+console.log(animals.slice(2, 2)); //empty array[]
+console.log(animals.slice(0, 2)); //[index0 , index1]
+
+// end >= array.length or end is ommited or undefined, array.length is used
+console.log(animals.slice(2, 9)); //9>7 //(2,7)
+console.log(animals.slice(2)); //end is undefined = array.length//(2,7)
+
+//animals === animalsSliced (return false) //different reference//different location
+// animals === animalsCopy (return true) // same reference
+//reference(memory address)
