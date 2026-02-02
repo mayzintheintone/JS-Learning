@@ -515,7 +515,8 @@ commonArray.forEach((el) => {
   if (typeof el === "number") newNumbers.push(el);
 });
 const onlyNumbers = commonArray.filter((number) => typeof el === "number");
-// Array.prototype.filter()
+
+// Array.prototype.filter()// filteredArray<= orgArray(Array Size)
 const originalArray = [1, 2, 3, 4, 5, 6, 7, 9, 11, 24, 23];
 //iterate on every single element once
 //callBackFn(must truthy or falsy)
@@ -523,7 +524,7 @@ const originalArray = [1, 2, 3, 4, 5, 6, 7, 9, 11, 24, 23];
 //a little similar with the map() method// same length with the original array
 const scores = [194, 224, 366, 128, 256, 213, 521, 501, 477, 471];
 //assume that only above 240 and scores pass the test
-const studentMarks = scores.filter((mark) => mark >= 240);
+const studentMarks = scores.filter((mark) => mark > 521);
 
 //Array.prototype.slice()
 // return a shallow copy
@@ -575,3 +576,35 @@ console.log(animals.slice(2)); //end is undefined = array.length//(2,7)
 //animals === animalsSliced (return false) //different reference//different location
 // animals === animalsCopy (return true) // same reference
 //reference(memory address)
+
+// Array.prototype.reduce()
+// want a value depanding on all the elements of an Array
+//Sum of all numbers with for loop
+const numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+console.log(sum);
+
+//with the reduce() method
+const totalSum = numbers.reduce((acc, currentValue) => {
+  return acc + currentValue; //must (return)
+  //first-iteration 0+1 = 1;
+  //second-iteration 1+2 = 3;
+  //third-iteration 3+3 = 6;
+  //fourth-iteration 6+4 = 10;
+  //fifth-iteration 10+5 = 15;
+}, 0); //acc = accumulator
+
+// Coding Challenge
+const someNumbers = [1, 33, 5, 26, 82, 14, 38, 69, 13, 18, 16, 11];
+//Get the biggest number in the above array by using reduce() method
+const greatestNumber = someNumbers.reduce((acc, currentValue) => {
+  if (acc < currentValue) {
+    return currentValue;
+  } else {
+    return acc;
+  }
+});
+console.log(greatestNumber);
