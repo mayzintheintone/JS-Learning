@@ -607,4 +607,49 @@ const greatestNumber = someNumbers.reduce((acc, currentValue) => {
     return acc;
   }
 });
-console.log(greatestNumber);
+const greatestNumber1 = someNumbers.reduce((acc, currentValue) => {
+  return acc < currentValue ? currentValue : acc;
+});
+console.log(greatestNumber1);
+
+//XIII.While Statement
+//Syntax
+//while(true?)execute statement{}
+let i = 0;
+console.log(i);
+while (i < 10) {
+  i++;
+  console.log(`Condition is true! Count: ${i}`);
+}
+console.log(i);
+
+//XIV. Switch statement(control flow)
+const name2 = "May";
+switch (name2) {
+  case "Paing":
+    console.log("Paing is May's boy");
+    break;
+  case "Ling":
+    console.log("Ling belongs to no one.");
+    break;
+  case "May":
+    console.log("She is my sunshine.");
+    break;
+  case "Pyae":
+    console.log("She is May's good friend.");
+    break;
+  default:
+    console.log("There is no match condition.");
+}
+
+if (name2 === "Paing") {
+  console.log("Paing is May's boy");
+} else if (name2 === "Ling") {
+  console.log("Ling belongs to no one.");
+} else if (name2 === "May") {
+  console.log("She is my sunshine.");
+} else if (name2 === "Pyae") {
+  console.log("She is May's good friend.");
+} else {
+  console.log("There is no match condition.");
+}
