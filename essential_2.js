@@ -14,7 +14,7 @@ let name = "May";
 // 4)function statements in curly braces({})
 // eg.1 sayHi() Function
 function sayHi() {
-  console.log(`Hello, this is greeting from "sayHi" functuion!`);
+  console.log(`Hello, this is greeting from "sayHi" function!`);
 }
 
 // Calling/ Invoking/Running a Function
@@ -653,3 +653,5 @@ if (name2 === "Paing") {
 } else {
   console.log("There is no match condition.");
 }
+
+expression & Statement;

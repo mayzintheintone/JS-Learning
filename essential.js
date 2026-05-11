@@ -20,7 +20,7 @@ console.log(typeof NaN);
 console.log("I'm " + 21 + " year old");
 
 //Using + operator
-// automatically convert nuber to string when operate with string
+// automatically convert number to string when operate with string
 console.log(10 + "10"); //"10" +"10"//Type corecion
 
 // using -, *,/ operators
@@ -69,7 +69,7 @@ if (true) {
 
 // where the whole if....else block is a statement; true is an expression;
 // Example declaration of a variable
-let profession = "Student"; //where the whole sentence is statement and ("Engineer") is expression
+let profession = "Student"; //where the whole sentence is statement and ("Student") is expression
 
 //V. Operator Precedence
 // When a sentence has two or more operators, which should be first is depend on the operator precedence table.
@@ -107,3 +107,5 @@ console.log(hasDriverlicense);
 isAdult && hasDriverlicense
   ? console.log("One can drive")
   : console.log("One cannot drive");
+
+//engine in node(js's runtime)
