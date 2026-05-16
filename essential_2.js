@@ -181,7 +181,7 @@ console.log(fruits);
 
 const replaceFruit2 = (fruitToRemove, fruitToReplace) => {
   if (!fruits.includes(fruitToRemove)) {
-    console.log("Uncess! Fruit to remove can't be found");
+    console.log("Unsuccess! Fruit to remove can't be found");
     return "unsuccessful!";
   }
   const indexOffruitToRemove = fruits.indexOf(fruitToRemove);

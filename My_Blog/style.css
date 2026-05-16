@@ -1,0 +1,23 @@
+body {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #000;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.head-text {
+  text-align: center;
+  font-size: 36px;
+}
+p {
+  text-align: center;
+}
+p span {
+  background-color: #000;
+  color: white;
+  padding: 0px 8px;
+  display: inline-block;
+}
